@@ -4,7 +4,7 @@ project:
     - "*.ipynb"
 
 website:
-  title: "Bash 스크립트"
+  title: "Bash Book"
   sidebar:
     style: "docked"
     search: true
