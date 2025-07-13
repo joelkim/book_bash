@@ -3,15 +3,6 @@ project:
   render:
     - "*.ipynb"
 
-website:
-  title: "Bash Book"
-  sidebar:
-    style: "docked"
-    search: true
-    contents:
-      - "index.ipynb"
-      - auto: "*.ipynb"
-
 format:
   html:
     toc: true
@@ -22,3 +13,17 @@ format:
     monofont: D2Coding
     language:
       crossref-tbl-title: "표"
+
+bibliography: references.bib
+reference-location: margin
+
+website:
+  title: "Bash Book"
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - "index.ipynb"
+      - "reserved.ipynb"
+      - "command_execution.ipynb"
+      - "reference.ipynb"
