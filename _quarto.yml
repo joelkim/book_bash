@@ -9,7 +9,7 @@ format:
     css: styles.css
     code-block-bg: true
     code-overflow: wrap
-    code-line-numbers: true
+    code-line-numbers: false
     monofont: D2Coding
     language:
       crossref-tbl-title: "표"
@@ -24,8 +24,9 @@ website:
     search: true
     contents:
       - "index.ipynb"
-      - "operation.ipynb"
-      - "reserved.ipynb"
+      - "characters.ipynb"
+      - "quotation.ipynb"
       - "expansion.ipynb"
+      - "shell_operation.ipynb"
       - "command_execution.ipynb"
       - "reference.ipynb"
