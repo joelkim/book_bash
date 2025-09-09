@@ -1,0 +1,180 @@
+[
+  {
+    "objectID": "temp.html",
+    "href": "temp.html",
+    "title": "Bash Book",
+    "section": "",
+    "text": "pwd\n\n/Users/joelkim/Work/personal/book_bash\n\n\n\ncd ~/Work\n\n\npwd\n\n/Users/joelkim/Work"
+  },
+  {
+    "objectID": "reference.html",
+    "href": "reference.html",
+    "title": "참고문헌",
+    "section": "",
+    "text": "“The GNU Bash Reference Manual.” 2025. 2025. https://www.gnu.org/software/bash/manual/bash.html.",
+    "crumbs": [
+      "참고문헌"
+    ]
+  },
+  {
+    "objectID": "command_execution.html",
+    "href": "command_execution.html",
+    "title": "명령 실행 방식",
+    "section": "",
+    "text": "셸은 다음과 같은 명령 실행 방식을 제공",
+    "crumbs": [
+      "명령 실행 방식"
+    ]
+  },
+  {
+    "objectID": "command_execution.html#단일-명령-실행",
+    "href": "command_execution.html#단일-명령-실행",
+    "title": "명령 실행 방식",
+    "section": "단일 명령 실행",
+    "text": "단일 명령 실행\n\n단일 명령은 단어와 공백의 반복이며 마지막에 제어연산자(control operator)로 끝난다.\n\n\n제어연산자\n\n줄바꿈 문자(newline)\n파이프라인 연산자\n\n|\n|&\n\n리스트 연산자\n\n;\n&\n||\n&&,\n\ncase 조건 종료 연산자\n\n;;\n;&\n;;&\n\n그룹실행 연산자\n\n(\n)\n\n\n\n\n단일 명령의 실행 구조\n\n변수 할당 또는 리디렉션이 있는 경우 나중에 실행하기 위해 임시 저장\n변수 할당 또는 리디렉션이 아닌 단어는 확장\n확장 후 첫번째 단어를 명령어로, 나머지 단어들을 인수로 인식",
+    "crumbs": [
+      "명령 실행 방식"
+    ]
+  },
+  {
+    "objectID": "command_execution.html#명령-파이프라인-실행",
+    "href": "command_execution.html#명령-파이프라인-실행",
+    "title": "명령 실행 방식",
+    "section": "명령 파이프라인 실행",
+    "text": "명령 파이프라인 실행\n명령 파이프라인은 명령이 다음 4가지 구분자로 연결된 것을 말한다.\n\n|\n|&",
+    "crumbs": [
+      "명령 실행 방식"
+    ]
+  },
+  {
+    "objectID": "command_execution.html#명령-리스트-실행",
+    "href": "command_execution.html#명령-리스트-실행",
+    "title": "명령 실행 방식",
+    "section": "명령 리스트 실행",
+    "text": "명령 리스트 실행\n명령 리스트는 명령 또는 명령 파이프라인이 다음 4가지 구분자로 연결된 것을 말한다.\n\n;\n\n실행결과와 상관없이 명령을 순차적 실행\n\n&\n\n실행결과와 상관없이 명령을 순차적으로 백드라운드 실행\n\n&&\n\n실행결과가 0일 때(성공)만 다음 명령 실행. 실행결과가 0이 아니면 중지\n\n||\n\n실행결과가 0이 아닐 때(실패)만 다음 명령 실행. 실행결과가 0이면 중지.",
+    "crumbs": [
+      "명령 실행 방식"
+    ]
+  },
+  {
+    "objectID": "command_execution.html#복합-실행",
+    "href": "command_execution.html#복합-실행",
+    "title": "명령 실행 방식",
+    "section": "복합 실행",
+    "text": "복합 실행\n복합 실행은 하나 이상의 명령 리스트가 다음과 같은 구성으로 조합되어 실행되는 것을 말한다\n\n루프 실행\n조건 실행\n그룹 실행\n\n\n루프 실행\n\nuntil\nwhile\nfor\n\n\n\n조건 실행\n\nif\ncase\nselect\n(( ))\n[[ ]]\n\n\n\n그룹 실행\n\n( list )\n\n\n서브셸을 생성하고 모든 명령을 서브셸에서 실행\n\n\n{ list; }\n\n\n서브셸을 생성하지 않고 모든 명령을 현재의 셸에서 실행\n마지막에 리스트내의 명령어와 } 기호를 구분하기 위해 반드시 ; 기호 필요 ( ; 기호가 없으면 } 기호가 리스트로 인식될 수 있음)",
+    "crumbs": [
+      "명령 실행 방식"
+    ]
+  },
+  {
+    "objectID": "characters.html",
+    "href": "characters.html",
+    "title": "문자",
+    "section": "",
+    "text": "셸 입력 문자열은 토큰(token)으로 분리된다.\n메타문자(metacharacter)는 셸 입력 문자열을 토큰으로 분리하는 기준이 되는 특수문자이다.\n메타문자에는 다음 10가지가 있다.\n\n공백문자(space)\n탭문자(tab)\n개행문자(newline)\n|\n&\n;\n(\n)\n&lt;\n&gt;\n\n\n\n\n#define shell_meta_chars   \"()&lt;&gt;;&|\"\n#define shell_break_chars  \"()&lt;&gt;;&| \\t\\n\"",
+    "crumbs": [
+      "문자"
+    ]
+  },
+  {
+    "objectID": "characters.html#메타문자",
+    "href": "characters.html#메타문자",
+    "title": "문자",
+    "section": "",
+    "text": "셸 입력 문자열은 토큰(token)으로 분리된다.\n메타문자(metacharacter)는 셸 입력 문자열을 토큰으로 분리하는 기준이 되는 특수문자이다.\n메타문자에는 다음 10가지가 있다.\n\n공백문자(space)\n탭문자(tab)\n개행문자(newline)\n|\n&\n;\n(\n)\n&lt;\n&gt;\n\n\n\n\n#define shell_meta_chars   \"()&lt;&gt;;&|\"\n#define shell_break_chars  \"()&lt;&gt;;&| \\t\\n\"",
+    "crumbs": [
+      "문자"
+    ]
+  },
+  {
+    "objectID": "characters.html#토큰",
+    "href": "characters.html#토큰",
+    "title": "문자",
+    "section": "토큰",
+    "text": "토큰\n\n예약어(reserved word)\n연산자(operator)\n단어(&lt;word&gt;)\n숫자(&lt;number&gt;)\n단어 리스트(&lt;word_list&gt;)\n명령어(&lt;command&gt;)\n\n\n참조: parse.y 파일\n/* Reserved words.  Members of the first group are only recognized\n   in the case that they are preceded by a list_terminator.  Members\n   of the second group are for [[...]] commands.  Members of the\n   third group are recognized only under special circumstances. */\n%token IF THEN ELSE ELIF FI CASE ESAC FOR SELECT WHILE UNTIL DO DONE FUNCTION COPROC\n%token COND_START COND_END COND_ERROR\n%token IN BANG TIME TIMEOPT TIMEIGN\n\n/* More general tokens. yylex () knows how to make these. */\n%token &lt;word&gt; WORD ASSIGNMENT_WORD REDIR_WORD\n%token &lt;number&gt; NUMBER\n%token &lt;word_list&gt; ARITH_CMD ARITH_FOR_EXPRS\n%token &lt;command&gt; COND_CMD\n%token AND_AND OR_OR GREATER_GREATER LESS_LESS LESS_AND LESS_LESS_LESS\n%token GREATER_AND SEMI_SEMI SEMI_AND SEMI_SEMI_AND\n%token LESS_LESS_MINUS AND_GREATER AND_GREATER_GREATER LESS_GREATER\n%token GREATER_BAR BAR_AND",
+    "crumbs": [
+      "문자"
+    ]
+  },
+  {
+    "objectID": "characters.html#예약어",
+    "href": "characters.html#예약어",
+    "title": "문자",
+    "section": "예약어",
+    "text": "예약어\n\nif\n\nthen\n\nelif\n\nelse\n\nfi\n\ntime\nfor\nin\n\nuntil\n\nwhile\n\ndo\n\ndone\ncase\n\nesac\n\ncoproc\n\nselect\n\nfunction\n{\n\n}\n\n[[\n\n]]\n\n!\n\n\nalias bash_debug=/Users/joelkim/Work/study/study_linux/source/bash/bash\n\n\nbash_debug -c \"echo hello\"\n\nStarting parse\nEntering state 0\nStack now 0\nReading a token\nNext token is token WORD ()\nShifting token WORD ()\nEntering state 13\nStack now 0 13\nReading a token\nNext token is token WORD ()\nReducing stack by rule 55 (line 804):\n   $1 = token WORD ()\n-&gt; $$ = nterm simple_command_element ()\nEntering state 38\nStack now 0 38\nReducing stack by rule 60 (line 831):\n   $1 = nterm simple_command_element ()\n-&gt; $$ = nterm simple_command ()\nEntering state 39\nStack now 0 39\nNext token is token WORD ()\nShifting token WORD ()\nEntering state 129\nStack now 0 39 129\nReducing stack by rule 55 (line 804):\n   $1 = token WORD ()\n-&gt; $$ = nterm simple_command_element ()\nEntering state 130\nStack now 0 39 130\nReducing stack by rule 61 (line 833):\n   $1 = nterm simple_command ()\n   $2 = nterm simple_command_element ()\n-&gt; $$ = nterm simple_command ()\nEntering state 39\nStack now 0 39\nReading a token\nNext token is token '\\n' ()\nReducing stack by rule 62 (line 837):\n   $1 = nterm simple_command ()\n-&gt; $$ = nterm command ()\nEntering state 40\nStack now 0 40\nReducing stack by rule 175 (line 1496):\n   $1 = nterm command ()\n-&gt; $$ = nterm pipeline ()\nEntering state 58\nStack now 0 58\nNext token is token '\\n' ()\nReducing stack by rule 168 (line 1408):\n   $1 = nterm pipeline ()\n-&gt; $$ = nterm pipeline_command ()\nEntering state 57\nStack now 0 57\nReducing stack by rule 167 (line 1404):\n   $1 = nterm pipeline_command ()\n-&gt; $$ = nterm simple_list1 ()\nEntering state 56\nStack now 0 56\nNext token is token '\\n' ()\nReducing stack by rule 160 (line 1340):\n   $1 = nterm simple_list1 ()\n-&gt; $$ = nterm simple_list ()\nEntering state 55\nStack now 0 55\nNext token is token '\\n' ()\nShifting token '\\n' ()\nEntering state 133\nStack now 0 55 133\nReducing stack by rule 151 (line 1310):\n   $1 = token '\\n' ()\n-&gt; $$ = nterm simple_list_terminator ()\nEntering state 135\nStack now 0 55 135\nReducing stack by rule 1 (line 435):\n   $1 = nterm simple_list ()\n   $2 = nterm simple_list_terminator ()\nStack now 0\nhello",
+    "crumbs": [
+      "문자"
+    ]
+  },
+  {
+    "objectID": "conditional_execution.html",
+    "href": "conditional_execution.html",
+    "title": "조건 실행",
+    "section": "",
+    "text": "%%bash\ntrue\necho $?\n\n0\n\n\n\n%%bash\nfalse\necho $?\n\n1\n\n\n\n%%bash\nif test -z '$(MAKELEVEL)'; then\n  false;\nelif test -n '$(MAKE_HOST)'; then\n  true;\nelif test -n '$(MAKE_VERSION)' && test -n '$(CURDIR)'; then\n  true;\nelse\n  false;\nfi\n\necho $?\n\ndebug2\n\n0"
+  },
+  {
+    "objectID": "conditional_execution.html#if-구문",
+    "href": "conditional_execution.html#if-구문",
+    "title": "조건 실행",
+    "section": "",
+    "text": "%%bash\ntrue\necho $?\n\n0\n\n\n\n%%bash\nfalse\necho $?\n\n1\n\n\n\n%%bash\nif test -z '$(MAKELEVEL)'; then\n  false;\nelif test -n '$(MAKE_HOST)'; then\n  true;\nelif test -n '$(MAKE_VERSION)' && test -n '$(CURDIR)'; then\n  true;\nelse\n  false;\nfi\n\necho $?\n\ndebug2\n\n0"
+  },
+  {
+    "objectID": "group_execution.html",
+    "href": "group_execution.html",
+    "title": "그룹 실행의 예시",
+    "section": "",
+    "text": "%%bash\n{\n  if test -z '$(MAKELEVEL)'; then\n    false;\n  elif test -n '$(MAKE_HOST)'; then\n    true;\n  elif test -n '$(MAKE_VERSION)' && test -n '$(CURDIR)'; then\n    true;\n  else\n    false;\n  fi;\n}"
+  },
+  {
+    "objectID": "quotation.html",
+    "href": "quotation.html",
+    "title": "인용 규칙",
+    "section": "",
+    "text": "https://www.gnu.org/software/bash/manual/bash.html#Shell-Operation-1\nchrome-extension://oemmndcbldboiebfnladdacbdfmadadm/file:///Users/joelkim/Work/study/study_linux/book/Script/Newham/2005%20-%20Newham%20-%20Learning%20the%20bash%20Shell.pdf#G11.633225\nchrome-extension://oemmndcbldboiebfnladdacbdfmadadm/file:///Users/joelkim/Work/study/study_linux/book/Script/Johnson/2015%20-%20Johnson%20-%20Pro%20Bash%20Programming.pdf#9781484201220_Ch04.indd%3Ab9781484201220_4%3A1\nchrome-extension://oemmndcbldboiebfnladdacbdfmadadm/file:///Users/joelkim/Work/study/study_linux/book/Script/Varma/2023%20-%20%C2%A0Varma%20-%20Pro%20Bash.pdf#0005706048.indd%3Ab978-1-4842-9588-5_4%3A160",
+    "crumbs": [
+      "인용 규칙"
+    ]
+  },
+  {
+    "objectID": "quotation.html#홑따옴표",
+    "href": "quotation.html#홑따옴표",
+    "title": "인용 규칙",
+    "section": "홑따옴표",
+    "text": "홑따옴표\n\n문자열을 홑따옴표로 감싸면 홑따옴표 내부의 모든 특수 문자의 의미가 사라지고 단순히 해당 문자를 표기하게 된다.",
+    "crumbs": [
+      "인용 규칙"
+    ]
+  },
+  {
+    "objectID": "quotation.html#겹따옴표",
+    "href": "quotation.html#겹따옴표",
+    "title": "인용 규칙",
+    "section": "겹따옴표",
+    "text": "겹따옴표\n\n문자열을 겹따옴표로 감싸면 다음 사항을 제외하고 나머지 특수 문자의 의미가 사라진다.\n\n“$”로 시작하는 특수 문자\n\n변수 확장됨\n\n“`”로 시작하는 특수 문자\n\n치환됨\n\n“\\”로 시작하는 특수 문자\n\n백슬래시 기호 뒤 문자가 $, ``,“,`, newline 이면 백슬래시만 사라지고 뒤 문자가 남음\n다른 경우에는 백슬래시 기호가 사라지지 않음\n\n“!”로 시작하는 특수 문자\n\n히스토리 확장됨\n\n“*” 인수\n“@” 인수\n\n\n\nname=joel\necho 'My name is $name.'\n\nMy name is $name.\n\n\n\nname=joel\necho \"My name is $name.\"\n\nMy name is joel.",
+    "crumbs": [
+      "인용 규칙"
+    ]
+  },
+  {
+    "objectID": "shell_operation.html",
+    "href": "shell_operation.html",
+    "title": "셸 동작",
+    "section": "",
+    "text": "https://www.gnu.org/software/bash/manual/bash.html#Shell-Operation-1\nchrome-extension://oemmndcbldboiebfnladdacbdfmadadm/file:///Users/joelkim/Work/study/study_linux/book/Script/Newham/2005%20-%20Newham%20-%20Learning%20the%20bash%20Shell.pdf#G11.633225\nchrome-extension://oemmndcbldboiebfnladdacbdfmadadm/file:///Users/joelkim/Work/study/study_linux/book/Script/Johnson/2015%20-%20Johnson%20-%20Pro%20Bash%20Programming.pdf#9781484201220_Ch04.indd%3Ab9781484201220_4%3A1\nchrome-extension://oemmndcbldboiebfnladdacbdfmadadm/file:///Users/joelkim/Work/study/study_linux/book/Script/Varma/2023%20-%20%C2%A0Varma%20-%20Pro%20Bash.pdf#0005706048.indd%3Ab978-1-4842-9588-5_4%3A160\n셸의 동작 순서는 다음과 같다.",
+    "crumbs": [
+      "셸 동작"
+    ]
+  },
+  {
+    "objectID": "shell_operation.html#토큰화",
+    "href": "shell_operation.html#토큰화",
+    "title": "셸 동작",
+    "section": "토큰화",
+    "text": "토큰화\n토큰화는 입력된 문자열을 다음과 같이 구분하여 묶는다.\n\n단어\n공백\n연산자\n\n이 때 인용(quoting) 규칙 및 별칭 확장(alias expansion) 규칙이 사용된다.\n\n별칭 확장 규칙",
+    "crumbs": [
+      "셸 동작"
+    ]
+  }
+]
