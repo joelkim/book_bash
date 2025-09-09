@@ -19,6 +19,7 @@ reference-location: margin
 
 website:
   title: "Bash Book"
+  google-analytics: G-EQNWVV8VZ7
   sidebar:
     style: "docked"
     search: true
