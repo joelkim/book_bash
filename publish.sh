@@ -1,3 +1,3 @@
 #!/bin/bash
 quarto render
-ghp-import -c bash.bykim.dev -f -n -o -p _site
+ghp-import -c bashbook.madebykim.kr -f -n -o -p _site
