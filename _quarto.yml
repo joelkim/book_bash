@@ -30,4 +30,5 @@ website:
       - "expansion.ipynb"
       - "shell_operation.ipynb"
       - "command_execution.ipynb"
+      - "environment.ipynb"
       - "reference.ipynb"
