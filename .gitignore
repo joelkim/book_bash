@@ -178,3 +178,5 @@ figs/
 _extensions/
 
 temp*.ipynb
+
+.DS_Store
