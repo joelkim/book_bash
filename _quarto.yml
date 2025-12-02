@@ -31,4 +31,5 @@ website:
       - "shell_operation.ipynb"
       - "command_execution.ipynb"
       - "environment.ipynb"
+      - "alias.ipynb"
       - "reference.ipynb"
